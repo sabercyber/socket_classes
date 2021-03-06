@@ -15,7 +15,9 @@ In the Socket server class it is possible to have the following operations
   3. TCP and UDP on a port specified by you. Current you can specify different ports for TCP and UDP. 
 
 # Code Implementation Summary
-![Code summary](https://res.cloudinary.com/sabercyber/image/upload/v1615046056/socket_classes/code_socket_class_usvepr.bmp)
+<p align="center">
+  <img src ="https://res.cloudinary.com/sabercyber/image/upload/v1615046056/socket_classes/code_socket_class_usvepr.bmp">
+</p>
 
 # Compilation and Usage
 ## Code Organization 
