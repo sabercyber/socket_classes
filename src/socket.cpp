@@ -92,15 +92,21 @@ bool Socket::init(){
     if (connect(sockfd, (struct sockaddr*)&servaddr,
 							sizeof(servaddr)) < 0) {
 		std::cout << "Socket connect failed" << std::endl;
+        return status;
 	}
+    status = true;
+    return status;
 }
 Socket::~Socket(){}
 
-bool Socket::send_data(std::string msg){
-
+bool Socket::send_data(std::string msg)
+{
+    bool status = false;
     buffer = msg;
-    write(sockfd, buffer.c_str(), buffer.length());
+    if (write(sockfd, buffer.c_str(), buffer.length()) > 0)
+        status = true;
     close(sockfd);
+    return status;
 
 }
 
